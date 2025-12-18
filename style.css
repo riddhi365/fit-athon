@@ -1,0 +1,116 @@
+:root {
+  --bg: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  --text: white;
+  --glass: rgba(255,255,255,0.15);
+}
+
+.light {
+  --bg: linear-gradient(135deg, #fdfbfb, #ebedee);
+  --text: #111;
+  --glass: rgba(255,255,255,0.7);
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.5s;
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 10px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.theme-toggle {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  border: none;
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+section {
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 1000px;
+}
+
+.glass {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+}
+
+.gallery img {
+  border-radius: 15px;
+  margin: 10px;
+  transition: 0.4s;
+}
+
+.gallery img:hover {
+  transform: scale(1.1) rotate(2deg);
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  flex: 1;
+  padding: 30px;
+  text-align: center;
+  border-radius: 15px;
+  background: rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* Carousel */
+.carousel {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.slides {
+  display: none;
+  animation: fade 1s;
+}
+
+.slides.active {
+  display: block;
+}
+
+.carousel-controls {
+  text-align: center;
+}
+
+@keyframes fade {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+}
