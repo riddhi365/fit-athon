@@ -3,7 +3,6 @@ body {
   font-family: "Segoe UI", sans-serif;
 }
 
-/* HERO */
 .hero {
   height: 70vh;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
@@ -19,7 +18,6 @@ body {
   margin-bottom: 20px;
 }
 
-/* SECTIONS */
 .section {
   padding: 80px 10%;
 }
@@ -34,12 +32,6 @@ body {
   color: #111;
 }
 
-h2 {
-  margin-bottom: 30px;
-  font-size: 32px;
-}
-
-/* CAROUSEL */
 .carousel {
   position: relative;
   height: 420px;
@@ -50,8 +42,8 @@ h2 {
   position: absolute;
   inset: 0;
   display: none;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
 }
 
@@ -75,10 +67,8 @@ h2 {
   font-size: 36px;
   font-weight: bold;
   color: white;
-  text-shadow: 0 4px 10px rgba(0,0,0,0.8);
 }
 
-/* EVENTS */
 .event {
   background: white;
   padding: 30px;
@@ -86,24 +76,6 @@ h2 {
   margin-bottom: 25px;
 }
 
-.event button {
-  margin-right: 10px;
-  padding: 10px 16px;
-  border: none;
-  border-radius: 10px;
-  background: #ff7a18;
-  color: white;
-  cursor: pointer;
-}
-
-/* BMI */
-.bmi input, .bmi button {
-  padding: 12px;
-  margin: 5px;
-  border-radius: 8px;
-}
-
-/* COMMITTEE */
 .cards {
   display: flex;
   gap: 30px;
@@ -117,13 +89,6 @@ h2 {
   text-align: center;
 }
 
-.card span {
-  display: block;
-  margin-top: 10px;
-  opacity: 0.7;
-}
-
-/* FOOTER */
 footer {
   padding: 30px;
   text-align: center;
