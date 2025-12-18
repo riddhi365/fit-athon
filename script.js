@@ -1,33 +1,34 @@
-let index = 0;
-const slides = document.querySelectorAll(".slides");
+// CAROUSEL
+let slides = document.querySelectorAll(".slide");
+let current = 0;
 
-function showSlide(i) {
-  slides.forEach(s => s.classList.remove("active"));
-  slides[i].classList.add("active");
-}
+setInterval(() => {
+  slides[current].classList.remove("active");
+  current = (current + 1) % slides.length;
+  slides[current].classList.add("active");
+}, 3500);
 
-function nextSlide() {
-  index = (index + 1) % slides.length;
-  showSlide(index);
-}
-
-function prevSlide() {
-  index = (index - 1 + slides.length) % slides.length;
-  showSlide(index);
-}
-
-setInterval(nextSlide, 3000);
-
-// Dark / Light mode
-function toggleTheme() {
-  document.body.classList.toggle("light");
-}
-
-// BMI
+// BMI CALCULATOR
 function calculateBMI() {
   const w = document.getElementById("weight").value;
   const h = document.getElementById("height").value / 100;
   if (!w || !h) return;
+
   const bmi = (w / (h * h)).toFixed(2);
-  document.getElementById("bmiResult").innerText = "Your BMI: " + bmi;
+  document.getElementById("bmiResult").innerText =
+    "Your BMI is " + bmi;
+}
+
+// EVENT REGISTRATION
+function registerEvent(eventName) {
+  localStorage.setItem(eventName, "registered");
+  document.getElementById("eventMsg").innerText =
+    "✅ Registered for " + eventName;
+}
+
+// EVENT REMINDER
+function setReminder(eventName) {
+  localStorage.setItem(eventName + "_reminder", "set");
+  document.getElementById("eventMsg").innerText =
+    "⏰ Reminder set for " + eventName;
 }
