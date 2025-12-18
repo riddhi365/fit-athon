@@ -1,4 +1,3 @@
-// CAROUSEL
 let slides = document.querySelectorAll(".slide");
 let current = 0;
 
@@ -8,27 +7,22 @@ setInterval(() => {
   slides[current].classList.add("active");
 }, 3500);
 
-// BMI CALCULATOR
 function calculateBMI() {
   const w = document.getElementById("weight").value;
   const h = document.getElementById("height").value / 100;
   if (!w || !h) return;
-
-  const bmi = (w / (h * h)).toFixed(2);
   document.getElementById("bmiResult").innerText =
-    "Your BMI is " + bmi;
+    "Your BMI is " + (w / (h * h)).toFixed(2);
 }
 
-// EVENT REGISTRATION
-function registerEvent(eventName) {
-  localStorage.setItem(eventName, "registered");
+function registerEvent(name) {
+  localStorage.setItem(name, "registered");
   document.getElementById("eventMsg").innerText =
-    "✅ Registered for " + eventName;
+    "✅ Registered for " + name;
 }
 
-// EVENT REMINDER
-function setReminder(eventName) {
-  localStorage.setItem(eventName + "_reminder", "set");
+function setReminder(name) {
+  localStorage.setItem(name + "_reminder", "set");
   document.getElementById("eventMsg").innerText =
-    "⏰ Reminder set for " + eventName;
+    "⏰ Reminder set for " + name;
 }
