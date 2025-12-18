@@ -2,96 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Fitness Club</title>
+  <title>VITC Fitness Club</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-
-<header>
-  <h1>🏋️ Fitness Club</h1>
-  <nav>
-    <a href="#slider">Home</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#events">Events</a>
-    <a href="#committee">Committee</a>
-    <a href="#hall">Hall of Fame</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<!-- HERO -->
+<header class="hero">
+  <img src="./logo.png" alt="VITC Fitness Club Logo" class="logo">
+  <h1>VITC Fitness Club</h1>
+  <p>Train Smart • Stay Fit • Be Consistent</p>
 </header>
 
-<!-- 🔥 Carousel Slider -->
-<section id="slider">
+<!-- CAROUSEL -->
+<section class="section dark">
   <div class="carousel">
-    <div class="slides active">Train Hard 💪</div>
-    <div class="slides">Stay Fit 🔥</div>
-    <div class="slides">Be Consistent 🏆</div>
-  </div>
-  <div class="carousel-controls">
-    <button onclick="prevSlide()">⟨</button>
-    <button onclick="nextSlide()">⟩</button>
-  </div>
-</section>
 
-<!-- Interactive Gallery -->
-<section id="gallery" class="glass">
-  <h2>Interactive Gallery</h2>
-  <div class="gallery">
-    <img src="https://source.unsplash.com/300x200/?gym" />
-    <img src="https://source.unsplash.com/300x200/?fitness" />
-    <img src="https://source.unsplash.com/300x200/?workout" />
+    <div class="slide active">
+      <img src="./logo.png" alt="Club Logo" class="carousel-logo">
+      <div class="slide-text">Stay Fit 🔥</div>
+    </div>
+
+    <div class="slide">
+      <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1600&q=80"
+           alt="Workout" class="carousel-image">
+      <div class="slide-text">Train Hard 💪</div>
+    </div>
+
   </div>
 </section>
 
-<!-- Future Events -->
-<section id="events" class="glass">
-  <h2>Future Events</h2>
-  <ul>
-    <li>💪 Yoga Workshop – 20 Dec</li>
-    <li>🏃 Marathon Training – 5 Jan</li>
-    <li>🔥 HIIT Bootcamp – 15 Feb</li>
-  </ul>
+<!-- EVENTS -->
+<section class="section light">
+  <h2>📅 Upcoming Events</h2>
+
+  <div class="event">
+    <h3>Yoga Wellness Camp</h3>
+    <p>📆 15 February 2026</p>
+    <button onclick="registerEvent('Yoga Wellness Camp')">Register</button>
+    <button onclick="setReminder('Yoga Wellness Camp')">Set Reminder</button>
+  </div>
+
+  <div class="event">
+    <h3>Marathon Training Program</h3>
+    <p>📆 10 April 2026</p>
+    <button onclick="registerEvent('Marathon Training Program')">Register</button>
+    <button onclick="setReminder('Marathon Training Program')">Set Reminder</button>
+  </div>
+
+  <p id="eventMsg"></p>
 </section>
 
-<!-- Committee -->
-<section id="committee" class="glass">
+<!-- BMI -->
+<section class="section dark">
+  <h2>🧮 BMI Calculator</h2>
+  <div class="bmi">
+    <input type="number" id="weight" placeholder="Weight (kg)">
+    <input type="number" id="height" placeholder="Height (cm)">
+    <button onclick="calculateBMI()">Calculate</button>
+    <p id="bmiResult"></p>
+  </div>
+</section>
+
+<!-- COMMITTEE -->
+<section class="section light">
   <h2>Committee</h2>
   <div class="cards">
-    <div class="card">Vishnu Pandian<br><small>President</small></div>
-    <div class="card">Jivesh Balaji<br><small>Vice President</small></div>
-    <div class="card">Binod<br><small>Nutritionist</small></div>
+    <div class="card">
+      Vishnu Pandian
+      <span>President</span>
+    </div>
+    <div class="card">
+      Jivesh Balaji
+      <span>Vice President</span>
+    </div>
+    <div class="card">
+      Binod
+      <span>Nutritionist</span>
+    </div>
   </div>
-</section>
-
-<!-- Hall of Fame -->
-<section id="hall" class="glass">
-  <h2>Hall of Fame</h2>
-  <p>🏆 Our fitness champions</p>
-  <ul>
-    <li>Emma – Lost 20kg</li>
-    <li>Ryan – Bodybuilding Winner</li>
-  </ul>
-</section>
-
-<!-- Innovative Feature -->
-<section id="innovation" class="glass">
-  <h2>BMI Calculator</h2>
-  <input id="weight" type="number" placeholder="Weight (kg)">
-  <input id="height" type="number" placeholder="Height (cm)">
-  <button onclick="calculateBMI()">Calculate</button>
-  <p id="bmiResult"></p>
-</section>
-
-<!-- Contact -->
-<section id="contact" class="glass">
-  <h2>Contact</h2>
-  <p>📞 +91 98765 43210</p>
-  <p>📧 fitnessclub@email.com</p>
 </section>
 
 <footer>
-  <p>© 2025 Fitness Club</p>
+  © 2026 VITC Fitness Club
 </footer>
 
 <script src="script.js"></script>
